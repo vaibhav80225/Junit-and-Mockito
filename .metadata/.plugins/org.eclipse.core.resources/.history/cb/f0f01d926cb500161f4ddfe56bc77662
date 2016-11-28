@@ -1,0 +1,12 @@
+import org.junit.Test;
+
+
+public class CalculatorTest {
+	CalculatorService service = new CalculatorController();
+	
+	@Test
+	public void testAdd(){
+		
+	}
+	
+}

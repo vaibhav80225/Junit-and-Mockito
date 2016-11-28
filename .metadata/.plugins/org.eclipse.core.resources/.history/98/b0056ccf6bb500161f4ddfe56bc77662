@@ -1,0 +1,25 @@
+
+public class CalculatorController implements CalculatorService {
+
+	public int add(int i,int j){
+		
+		return 20;
+	}
+	public int multiply(int i,int j){
+		
+		return 10;
+	}
+	public double divide(int i,int j)throws Exception{
+		return i/j;
+	}
+	public int power(int i){
+		
+		return i*i;
+		
+	}
+	@Override
+	public int subtract(int i, int j) {
+		// TODO Auto-generated method stub
+		return i-j;
+	}
+}

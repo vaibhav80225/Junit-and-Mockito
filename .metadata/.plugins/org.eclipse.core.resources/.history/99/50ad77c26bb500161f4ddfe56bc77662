@@ -1,0 +1,8 @@
+
+public interface CalculatorService {
+	public int add(int i,int j);
+	public int multiply(int i,int j);
+	public int power(int i);
+	public double divide(int i,int j);
+	public int subtract(int i,int j);
+}

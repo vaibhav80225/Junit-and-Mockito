@@ -1,0 +1,23 @@
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class CalculatorTest {
+	CalculatorService service = new CalculatorController();
+	
+	int result;
+	int i,j;
+	@Before
+	public void setup(){
+		i=30;
+		j=10;
+	}
+	@Test
+	public void testAdd(){
+		result = service.add(10,20);
+		Assert.assertEquals(i+j, result);
+		
+	}
+	
+}
