@@ -1,0 +1,33 @@
+package com.wcisw.junit;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class GreetingImpTest {
+	
+	private Greeting greeting;
+
+	@Before
+	public void setup(){
+		greeting = new GreetingImp();
+	}
+	@Test
+	public void greetShouldReturnAValidOutput() {
+		String result = greeting.greet("junit");
+		assertNotNull(result);
+		assertEquals("hello junit", result);
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void greetShouldThrowAnException_For_Null(){
+		greeting.greet(null);
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void greetShouldThrowAnException_For_Blank(){
+		greeting.greet("");
+	}
+}
+

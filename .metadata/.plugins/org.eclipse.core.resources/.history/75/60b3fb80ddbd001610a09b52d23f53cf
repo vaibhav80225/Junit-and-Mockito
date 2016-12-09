@@ -1,0 +1,5 @@
+package com.wcisw.junit;
+
+public interface Greeting {
+	public greet(String name);
+}
