@@ -1,0 +1,33 @@
+package com.wcisw.order.bo;
+
+import java.sql.SQLException;
+
+import com.wcisw.order.bo.exception.BOException;
+import com.wcisw.order.dao.OrderDao;
+import com.wcisw.order.dto.Order;
+
+public class OrderBoImpl implements OrderBo {
+
+	private OrderDao dao;
+	
+	@Override
+	public boolean placeOrder(Order order) throws BOException {
+		try {
+			dao.create(order);
+		} catch (SQLException e) {
+			throws new BOException();
+		}
+		return false;
+	}
+
+	@Override
+	public boolean cancelOrder(int id) throws BOException {
+		return false;
+	}
+
+	@Override
+	public boolean deleteOrder(int id) throws BOException {
+		return false;
+	}
+
+}

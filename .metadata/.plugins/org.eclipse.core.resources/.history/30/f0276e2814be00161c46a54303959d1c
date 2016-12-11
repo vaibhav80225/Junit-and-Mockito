@@ -1,0 +1,14 @@
+package com.wcisw.order.bo;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class OrderBoImplTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

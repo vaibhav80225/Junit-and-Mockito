@@ -1,0 +1,5 @@
+package com.wcisw.order.bo;
+
+public interface OrderBo {
+
+}

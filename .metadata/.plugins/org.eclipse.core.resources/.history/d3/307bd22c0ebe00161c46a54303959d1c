@@ -1,0 +1,5 @@
+package com.wcisw.order.dao;
+
+public class Order {
+
+}

@@ -8,6 +8,20 @@
 <fullyQualifiedTypeName name="CalculatorService"/>
 <fullyQualifiedTypeName name="CalculatorController"/>
 <fullyQualifiedTypeName name="org.junit.Assert"/>
-<fullyQualifiedTypeName name="org.junit.Before"/>
 <fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="com.wcisw.junit.GreetingImp"/>
+<fullyQualifiedTypeName name="java.lang.Class"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="org.junit.After"/>
+<fullyQualifiedTypeName name="com.wcisw.junit.Greeting"/>
+<fullyQualifiedTypeName name="org.junit.Before"/>
+<fullyQualifiedTypeName name="org.mockito.MockitoAnnotations"/>
+<fullyQualifiedTypeName name="org.mockito.Mock"/>
+<fullyQualifiedTypeName name="com.wcisw.order.dao.OrderDao"/>
+<fullyQualifiedTypeName name="com.wcisw.order.bo.OrderBoImpl"/>
+<fullyQualifiedTypeName name="com.wcisw.order.dto.Order"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="org.mockito.Mockito"/>
+<fullyQualifiedTypeName name="com.wcisw.order.bo.exception.BOException"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
 </qualifiedTypeNameHistroy>

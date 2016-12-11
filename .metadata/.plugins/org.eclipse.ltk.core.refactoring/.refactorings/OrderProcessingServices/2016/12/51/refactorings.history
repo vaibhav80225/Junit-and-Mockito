@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;com.wcisw.order.bo.OrderBoImplTest.setup().order&apos; in &apos;com.wcisw.order.bo.OrderBoImplTest.setup()&apos; to field&#x0D;&#x0A;- Original project: &apos;OrderProcessingServices&apos;&#x0D;&#x0A;- Original element: &apos;com.wcisw.order.bo.OrderBoImplTest.setup().order&apos;&#x0D;&#x0A;- Field name: &apos;order&apos;&#x0D;&#x0A;- Initialize field in method&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" description="Convert local variable &apos;order&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/test&lt;com.wcisw.order.bo{OrderBoImplTest.java" name="order" selection="587 19" stamp="1481434167859" static="false" version="1.0" visibility="2"/>
+</session>

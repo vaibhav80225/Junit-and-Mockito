@@ -1,0 +1,26 @@
+package com.wcisw.order.bo;
+
+import com.wcisw.order.bo.exception.BOException;
+import com.wcisw.order.dto.Order;
+
+public class OrderBoImple implements OrderBo {
+
+	@Override
+	public boolean placeOrder(Order order) throws BOException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean cancelOrder(int id) throws BOException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteOrder(int id) throws BOException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

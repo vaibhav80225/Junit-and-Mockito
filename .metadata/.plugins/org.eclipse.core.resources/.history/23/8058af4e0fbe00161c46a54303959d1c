@@ -1,0 +1,5 @@
+package com.wcisw.order.bo.exception;
+
+public class BOException extends Exception {
+
+}

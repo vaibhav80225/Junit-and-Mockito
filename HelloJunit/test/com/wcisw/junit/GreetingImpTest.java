@@ -5,20 +5,21 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-/*This is simple junit example that is 
-used to show the simple flow of junit test cases
-with exceptional condition.
 
-Developed by : vaibhav
+/*This is simple junit example that is 
+ used to show the simple flow of junit test cases
+ with exceptional condition.
+
+ Developed by : vaibhav
  */
 public class GreetingImpTest {
 
 	private Greeting greeting;
 
-	//Before method executed before every test case
+	// Before method executed before every test case
 
 	@Before
-	public void setup(){
+	public void setup() {
 		greeting = new GreetingImp();
 		System.out.println("setup");
 	}
@@ -32,24 +33,22 @@ public class GreetingImpTest {
 	}
 
 	@Test(expected = IllegalArgumentException.class)
-	public void greetShouldThrowAnException_For_Null(){
+	public void greetShouldThrowAnException_For_Null() {
 		System.out.println("greetShouldThrowAnException_For_Null");
 		greeting.greet(null);
 	}
 
 	@Test(expected = IllegalArgumentException.class)
-	public void greetShouldThrowAnException_For_Blank(){
+	public void greetShouldThrowAnException_For_Blank() {
 		System.out.println("greetShouldThrowAnException_For_Blank");
 		greeting.greet("");
 	}
 
-	//After executed after every test cases
+	// After executed after every test cases
 	@After
-	public void teardown(){
+	public void teardown() {
 		System.out.println("teardown");
 		greeting = null;
 	}
 
-
 }
-

@@ -1,0 +1,4 @@
+1481287734241	Encapsulate field 'status'
+1481287742546	Encapsulate field 'id'
+1481288824224	Encapsulate field 'dao'
+1481347064158	Convert local variable 'bo' to field

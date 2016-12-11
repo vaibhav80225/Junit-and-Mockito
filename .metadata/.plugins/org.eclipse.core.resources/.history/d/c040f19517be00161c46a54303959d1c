@@ -1,0 +1,29 @@
+package com.wcisw.order.bo;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+
+import com.wcisw.order.dao.OrderDao;
+
+public class OrderBoImplTest {
+
+	@Mock
+	OrderDao dao;
+	
+	@Before
+	public void setup(){
+		
+		MockitoAnnotations.initMocks(this);
+	}
+	
+	@Test
+	public void placeOrder_Should_Create_An_Order() {
+		
+		
+	}
+
+}

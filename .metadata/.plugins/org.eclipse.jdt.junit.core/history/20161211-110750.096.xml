@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="OrderBoImplTest" project="OrderProcessingServices" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="com.wcisw.order.bo.OrderBoImplTest" time="0.053">
+    <testcase name="placeOrder_Should_Create_An_Order" classname="com.wcisw.order.bo.OrderBoImplTest" time="0.045"/>
+    <testcase name="placeOrder_Throw_BOException" classname="com.wcisw.order.bo.OrderBoImplTest" time="0.005"/>
+    <testcase name="cancelOrder_Should_Cancel_Order" classname="com.wcisw.order.bo.OrderBoImplTest" time="0.001"/>
+    <testcase name="placeOrder_Should_Not_Create_An_Order" classname="com.wcisw.order.bo.OrderBoImplTest" time="0.001"/>
+    <testcase name="cancelOrder_Should_Not_Cancel_Order" classname="com.wcisw.order.bo.OrderBoImplTest" time="0.001"/>
+  </testsuite>
+</testrun>
