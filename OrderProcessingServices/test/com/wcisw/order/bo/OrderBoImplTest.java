@@ -1,0 +1,117 @@
+package com.wcisw.order.bo;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import java.sql.SQLException;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+
+import com.wcisw.order.bo.exception.BOException;
+import com.wcisw.order.dao.OrderDao;
+import com.wcisw.order.dto.Order;
+
+public class OrderBoImplTest {
+
+	@Mock
+	OrderDao dao;
+	private OrderBoImpl bo;
+	private Order order;
+
+	@Before
+	public void setup() {
+
+		MockitoAnnotations.initMocks(this);
+		bo = new OrderBoImpl();
+		bo.setDao(dao);
+		order = new Order();
+	}
+
+	@Test
+	public void placeOrder_Should_Create_An_Order() throws SQLException,
+			BOException {
+		Mockito.when(dao.create(order)).thenReturn(new Integer(1));
+		boolean result = bo.placeOrder(order);
+		assertTrue(result);
+		Mockito.verify(dao).create(order);
+	}
+
+	@Test
+	public void placeOrder_Should_Not_Create_An_Order() throws SQLException,
+			BOException {
+		Mockito.when(dao.create(order)).thenReturn(new Integer(0));
+		boolean result = bo.placeOrder(order);
+		assertFalse(result);
+		Mockito.verify(dao).create(order);
+	}
+
+	@Test(expected = BOException.class)
+	public void placeOrder_Throw_BOException() throws SQLException, BOException {
+		Mockito.when(dao.create(order)).thenThrow(SQLException.class);
+		bo.placeOrder(order);
+	}
+
+	@Test
+	public void cancelOrder_Should_Cancel_Order() throws SQLException,
+			BOException {
+		Mockito.when(dao.read(1)).thenReturn(order);
+		Mockito.when(dao.update(order)).thenReturn(1);
+		boolean result = bo.cancelOrder(1);
+		assertTrue(result);
+	}
+
+	@Test
+	public void cancelOrder_Should_Not_Cancel_Order() throws SQLException,
+			BOException {
+		Mockito.when(dao.read(1)).thenReturn(order);
+		Mockito.when(dao.update(order)).thenReturn(0);
+		boolean result = bo.cancelOrder(1);
+		assertFalse(result);
+	}
+
+	@Test(expected = BOException.class)
+	public void cancelOrder_Read_Throw_BoException() throws SQLException,
+			BOException {
+		Mockito.when(dao.read(1)).thenThrow(SQLException.class);
+		bo.cancelOrder(1);
+	}
+
+	@Test(expected = BOException.class)
+	public void cancelOrder_Update_Throw_Boexception() throws BOException,
+			SQLException {
+		Mockito.when(dao.read(1)).thenReturn(order);
+		Mockito.when(dao.update(order)).thenThrow(SQLException.class);
+		bo.cancelOrder(1);
+		Mockito.verify(dao).update(order);
+	}
+
+	@Test
+	public void deleteOrder_Should_Delete_An_Order() throws SQLException,
+			BOException {
+
+		Mockito.when(dao.delete(1)).thenReturn(1);
+		boolean result = bo.deleteOrder(1);
+		assertTrue(result);
+	}
+
+	@Test
+	public void deleteOrder_Should_Not_Delete_An_Order() throws SQLException,
+			BOException {
+
+		Mockito.when(dao.delete(1)).thenReturn(0);
+		boolean result = bo.deleteOrder(1);
+		assertFalse(result);
+	}
+
+	@Test(expected = BOException.class)
+	public void deleteOrder_Should_Throw_Boexception() throws SQLException,
+			BOException {
+		Mockito.when(dao.delete(1)).thenThrow(SQLException.class);
+		bo.deleteOrder(1);
+	}
+
+}
